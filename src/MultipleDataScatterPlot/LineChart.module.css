@@ -1,0 +1,64 @@
+.title {
+  font-size: 1.8em;
+  top: -5px;
+  fill: #635f5d;
+}
+
+.axisLabel {
+  font-size: 1.5em;
+  fill: #635f5d;
+}
+
+.voronoi path {
+  fill: none;
+  /* stroke="pink"; */
+  pointer-events: all;
+}
+/* .voronoiPath { */
+/*   fill: none; */
+/* } */
+
+.marks {
+  fill: none;
+  stroke: #c0c0bb;
+}
+
+.marksActive {
+  fill: none;
+  stroke: #137b80;
+}
+
+.dataPoint {
+  fill: #137b80;
+}
+
+.tooltip,
+.tooltipStroke {
+  fill: #137b80;
+  font-size: 1.2em;
+}
+
+.tooltipStroke {
+  stroke: white;
+  stroke-width: 3px;
+}
+
+.marker-line {
+  fill: none;
+  stroke: #a2a2a2;
+}
+.tick text {
+  fill: #635f5d;
+  cursor: default;
+  font-size: 14px;
+}
+
+.tick line {
+  fill: none;
+  stroke: #dedeed;
+}
+
+.markerLine {
+  stroke: #bd2d28;
+  stroke-width: 2px;
+}

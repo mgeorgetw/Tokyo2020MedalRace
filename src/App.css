@@ -2,37 +2,84 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#vg-tooltip-element {
+  font-size: 20px;
+  color: #3e3c38;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tick text {
+  fill: #635f5d;
+  cursor: default;
+  font-size: 0.5em;
+}
+
+.marks rect {
+  fill: #137b80;
+}
+
+.marks circle {
+  fill: #137b80;
+  opacity: 0.3;
+}
+
+/* .marks path { */
+/*   stroke: #137b80; */
+/*   stroke-width: 4; */
+/*   stroke-linejoin: round; */
+/*   stroke-linecap: round; */
+/* } */
+
+.marks .land {
+  fill: #b5b5b5;
+}
+
+.marks .interiors {
+  fill: none;
+  stroke: #cacaca;
+}
+
+.marks .sphere {
+  fill: #e8e8e8;
+}
+
+.marks .graticules,
+.tick line {
+  fill: none;
+  stroke: #ccc;
+}
+
+.menus-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.axis-label,
+.dropdown-label {
+  font-size: 0.5em;
+  fill: #635f5d;
+  color: #635f5d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown-label {
+  margin-left: 60px;
+  margin-right: 10px;
+}
+
+.Dropdown-root {
+  font-size: 1.5em;
+  width: 300px;
+  display: inline-block;
+}
+
+.Dropdown-menu {
+  max-height: 500px !important;
 }

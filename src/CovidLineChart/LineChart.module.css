@@ -1,0 +1,26 @@
+.axisLabel {
+  font-size: 1.5em;
+  fill: #635f5d;
+  color: #635f5d;
+}
+
+.marks {
+  fill: none;
+  stroke: #137b80;
+}
+
+.tick text {
+  fill: #635f5d;
+  cursor: default;
+  font-size: 14px;
+}
+
+.tick line {
+  fill: none;
+  stroke: #ccc;
+}
+
+.markerLine {
+  stroke: #bd2d28;
+  stroke-width: 2px;
+}

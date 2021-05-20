@@ -1,0 +1,24 @@
+
+
+NVIM v0.4.4
+Build type: Release
+LuaJIT 2.1.0-beta3
+Compilation: clang -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1 -DNDEBUG -DMIN_LOG_LEVEL=3 -Wall -Wextra -pedantic -Wno-unused-parameter -Wstrict-prototypes -std=gnu99 -Wshadow -Wconversion -Wmissing-prototypes -Wimplicit-fallthrough -Wvla -fstack-protector-strong -fno-common -fdiagnostics-color=auto -DINCLUDE_GENERATED_DECLARATIONS -D_GNU_SOURCE -DNVIM_MSGPACK_HAS_FLOAT32 -DNVIM_UNIBI_HAS_VAR_FROM -I/tmp/neovim-20210318-48132-k7r45c/neovim-0.4.4/build/config -I/tmp/neovim-20210318-48132-k7r45c/neovim-0.4.4/src -I/usr/local/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/usr/local/opt/gettext/include -I/tmp/neovim-20210318-48132-k7r45c/neovim-0.4.4/build/src/nvim/auto -I/tmp/neovim-20210318-48132-k7r45c/neovim-0.4.4/build/include
+Compiled by brew@BigSur
+
+Features: +acl +iconv +tui
+See ":help feature-compile"
+
+   system vimrc file: "$VIM/sysinit.vim"
+  fall-back for $VIM: "/usr/local/Cellar/neovim/0.4.4_2/share/nvim"
+
+Run :checkhealth for more info1970-01-06 15:58:57.100278: AutoUpdate called [/Users/zhaoyuanhuang/Git/dataviz/aface/]
+1970-01-06 15:58:57.100896: Vim filetype: '', sanitized filetype: ''
+1970-01-06 15:58:57.101127: Checking if file is valid [/Users/zhaoyuanhuang/Git/dataviz/aface/]
+1970-01-06 15:58:57.101332: Empty filename or type
+1970-01-06 15:58:57.101527: Not a valid file, stopping processing
+1970-01-06 15:59:44.181957: AutoUpdate called [/Users/zhaoyuanhuang/Git/dataviz/aface/]
+1970-01-06 15:59:44.182928: Vim filetype: '', sanitized filetype: ''
+1970-01-06 15:59:44.183291: Checking if file is valid [/Users/zhaoyuanhuang/Git/dataviz/aface/]
+1970-01-06 15:59:44.183514: Empty filename or type
+1970-01-06 15:59:44.183765: Not a valid file, stopping processing
