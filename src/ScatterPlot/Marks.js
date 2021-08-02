@@ -1,4 +1,4 @@
-import styles from "./ScatterPlot.module.css";
+import styles from "./css/ScatterPlot.module.css";
 export const Marks = ({
   xScale,
   xValue,
@@ -6,17 +6,29 @@ export const Marks = ({
   yValue,
   data,
   tooltipFormat,
-  circleRadius = 10
+  circleRadius = 10,
 }) =>
   // The bar itself
   data.map((d, index) => (
-    <circle
-      key={index}
-      className={styles.marks}
-      cx={xScale(xValue(d))}
-      cy={yScale(yValue(d))}
-      r={circleRadius}
-    >
-      <title>{tooltipFormat(xValue(d))}</title>
-    </circle>
+    <>
+      <circle
+        key={index}
+        className={styles.marks}
+        cx={xScale(xValue(d))}
+        cy={yScale(yValue(d))}
+        r={circleRadius}
+      >
+        <title>{`${d.entity} has earned ${tooltipFormat(
+          xValue(d)
+        )} medals, resulting in ${yValue(d)} medals per million people`}</title>
+      </circle>
+      <text
+        x={xScale(xValue(d)) + circleRadius + 3}
+        y={yScale(yValue(d))}
+        dy=".32em"
+        alignmentBaseline="middle"
+      >
+        {d.entity}
+      </text>
+    </>
   ));

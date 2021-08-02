@@ -1,0 +1,8 @@
+.nav {
+  display: block;
+  margin: 1em 0;
+}
+
+.nav > * {
+  margin-right: 1em;
+}

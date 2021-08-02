@@ -1,6 +1,12 @@
+import { MedalsPerMillionPeopleBar } from "./MedalsPerMillionPeople/index";
+import { ScatterPlot } from "./ScatterPlot";
 import "./App.css";
-import { Index } from "./MultipleDataScatterPlot/index";
 
-const App = () => <Index />;
+const App = () => (
+  <>
+    <MedalsPerMillionPeopleBar />
+    <ScatterPlot />
+  </>
+);
 
 export default App;

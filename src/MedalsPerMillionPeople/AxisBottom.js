@@ -1,12 +1,14 @@
-import styles from "./css/ScatterPlot.module.css";
+import React from "react";
+import styles from "./css/BarChart.module.css";
 export const AxisBottom = ({
   xScale,
   innerHeight,
   tickFormat,
   tickOffset = 3,
+  tickCount = 6,
 }) =>
   // Label and reference lines for x scale
-  xScale.ticks().map((tickValue) => (
+  xScale.ticks(tickCount).map((tickValue) => (
     // Each tick goes to the position indicating its value
     <g
       className={styles.tick}

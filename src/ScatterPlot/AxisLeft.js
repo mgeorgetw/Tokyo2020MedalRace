@@ -1,7 +1,7 @@
-import styles from "./ScatterPlot.module.css";
+import styles from "./css/ScatterPlot.module.css";
 export const AxisLeft = ({ yScale, innerWidth, tickOffset = 3 }) =>
   // Label for y scale, which is country names
-  yScale.ticks().map(tickValue => (
+  yScale.ticks(2).map((tickValue) => (
     <g
       key={tickValue}
       className={styles.tick}
