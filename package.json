@@ -3,6 +3,7 @@
   "homepage": "https://mgeorgetw.github.io/Tokyo2020MedalRace",
   "version": "1.0.0",
   "private": false,
+  "license": "The MIT License",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
