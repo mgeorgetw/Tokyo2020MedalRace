@@ -22,7 +22,7 @@ const Credit = () => (
   </p>
 );
 
-const initialMinMedals = 4;
+const initialMinMedals = 5;
 const width = window.innerWidth < 1000 ? window.innerWidth : 1000;
 const height = width > 480 ? width * 0.6 : width * 0.8;
 const margin = { top: 20, right: 100, bottom: 60, left: 75 };
