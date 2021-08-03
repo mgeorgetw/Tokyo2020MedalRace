@@ -8,7 +8,6 @@ export const Marks = ({
   tooltipFormat,
   circleRadius = 10,
 }) =>
-  // The bar itself
   data.map((d, index) => (
     <>
       <circle
@@ -25,8 +24,7 @@ export const Marks = ({
       <text
         x={xScale(xValue(d)) + circleRadius + 3}
         y={yScale(yValue(d))}
-        dy=".32em"
-        alignmentBaseline="middle"
+        dominantBaseline="central"
       >
         {d.entity}
       </text>

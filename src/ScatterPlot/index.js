@@ -14,10 +14,18 @@ const ChartTitle = ({ title }) => (
   </div>
 );
 
+const Credit = () => (
+  <p className="credit">
+    Credit: This chart is created based on Edouard Mathieu's{" "}
+    <a href="https://twitter.com/redouad/status/1418976240954978309">idea</a>{" "}
+    and <a href="https://github.com/edomt/tokyo2020">his project on GitHub</a>.
+  </p>
+);
+
 const initialMinMedals = 4;
 const width = window.innerWidth < 1000 ? window.innerWidth : 1000;
 const height = width > 480 ? width * 0.6 : width * 0.8;
-const margin = { top: 20, right: 90, bottom: 60, left: 75 };
+const margin = { top: 20, right: 100, bottom: 60, left: 75 };
 
 // The chart's real height and width
 const innerHeight = height - margin.top - margin.bottom;
@@ -61,9 +69,7 @@ export const ScatterPlot = () => {
   return (
     <Card>
       <ChartTitle title="2020 Summer Olympics medals won" />
-      <pre>
-        Last updated: {data[0].last_updated.toLocaleDateString("zh-TW")}
-      </pre>
+      <pre>Last updated: {data[0].last_updated.toLocaleDateString("ja")}</pre>
       <Input
         min={1}
         max={10}
@@ -111,6 +117,7 @@ export const ScatterPlot = () => {
           />
         </g>
       </svg>
+      <Credit />
     </Card>
   );
 };

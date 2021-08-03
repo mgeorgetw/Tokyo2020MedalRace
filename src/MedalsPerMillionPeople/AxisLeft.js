@@ -8,12 +8,11 @@ export const AxisLeft = ({ yScale, tickOffset = 3 }) =>
       transform={`translate(0,${yScale(tickValue) + yScale.bandwidth() / 2})`}
     >
       <text
-        dy=".18em"
         x={-tickOffset}
         style={{
           fontWeight: "bold",
           textAnchor: "end",
-          dominantBaseline: "middle",
+          dominantBaseline: "central",
         }}
       >
         {tickValue}

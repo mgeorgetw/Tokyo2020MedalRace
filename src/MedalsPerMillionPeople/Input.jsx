@@ -2,9 +2,8 @@ import styles from "./css/Input.module.css";
 
 export const Input = ({ min, max, selected, handleChange }) => (
   <div className={styles.inputContainer}>
-    <p>Only include {Number(selected) === max ? "all" : "top"}</p>
+    <p>Include {Number(selected) === max ? "all" : "top"}</p>
     <input
-      className={styles.slider}
       type="number"
       min={min}
       max={max}
@@ -12,6 +11,6 @@ export const Input = ({ min, max, selected, handleChange }) => (
       value={selected}
       onChange={(e) => e.target.value > 0 && handleChange(e.target.value)}
     />
-    <p> teams</p>
+    <p> entities</p>
   </div>
 );

@@ -13,8 +13,9 @@ import {
 import { AxisBottom } from "./AxisBottom";
 import { AxisLeft } from "./AxisLeft";
 import { Marks } from "./Marks";
+import { Tooltip } from "./Tooltip";
 // import { ColorLegend } from "./ColorLegend";
-// import styles from "./BarChart.module.css";
+// import chartStyles from "./css/BarChart.module.css";
 
 const width = window.innerWidth < 1000 ? window.innerWidth : 1000;
 const margin = { top: 5, right: 50, bottom: 45, left: 160 };
@@ -37,7 +38,9 @@ const fadeOpacity = 0.3;
 export const BarChart = ({ view, data, rows }) => {
   // console.log(data);
   const [hoveredValue, setHoveredValue] = useState(null);
+  const [points, setPoints] = useState(null);
   const handleHover = useCallback(setHoveredValue, [setHoveredValue]);
+  const trackPointer = useCallback(setPoints, [setPoints]);
 
   const height = 20 * rows + margin.top + margin.bottom;
   // The chart's real height and width
@@ -97,9 +100,18 @@ export const BarChart = ({ view, data, rows }) => {
             colorScale={colorScale}
             tooltipFormat={labelFormat}
             onHover={handleHover}
+            onMove={trackPointer}
             hoveredValue={hoveredValue}
             fadeOpacity={fadeOpacity}
           />
+          {hoveredValue && points ? (
+            <Tooltip
+              data={data}
+              hoveredValue={hoveredValue}
+              points={points}
+              labelOffset={10}
+            />
+          ) : null}
         </g>
         {/* <g transform={`translate(${legendX}, ${legendY})`}> */}
         {/*   <text className={styles.legendLabel} x={-7} y={-legendItemSpacing}> */}

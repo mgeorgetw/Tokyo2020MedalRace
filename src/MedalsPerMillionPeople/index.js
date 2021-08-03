@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import { useData } from "./useData";
 import { Card } from "./Card";
 import { Input } from "./Input";
-// import { useDeaths } from "./useDeaths";
-// import { useInfected } from "./useInfected";
 import { NavBar } from "./NavBar";
 import { BarChart } from "./BarChart";
-// import { Collapsible } from "./Collapsible";
 
 const ChartTitle = ({ title }) => (
   <div>
@@ -14,17 +11,22 @@ const ChartTitle = ({ title }) => (
   </div>
 );
 
+const Credit = () => (
+  <p className="credit">
+    Credit: This chart is created based on Edouard Mathieu's{" "}
+    <a href="https://twitter.com/redouad/status/1418976240954978309">idea</a>{" "}
+    and <a href="https://github.com/edomt/tokyo2020">his project on GitHub</a>.
+  </p>
+);
+
 export const MedalsPerMillionPeopleBar = () => {
   const [view, setView] = useState("mpm");
   const [topTeams, setTopTeams] = useState(30);
   const rawData = useData();
-  // console.log(data);
 
-  if (!rawData) return "Loading ...";
+  if (!rawData) return <pre>"Loading..."</pre>;
   const data = rawData.slice(0, topTeams);
-
-  // const infected = view === "age" ? infectedData.age : infectedData.gender;
-  // const deaths = view === "age" ? deathsData.age : deathsData.gender;
+  // if (data) console.log(data[0]);
 
   return (
     <Card>
@@ -33,9 +35,7 @@ export const MedalsPerMillionPeopleBar = () => {
           view === "mpm" ? "medals per million people" : "total medals won"
         }`}
       />
-      <pre>
-        Last updated: {data[0].last_updated.toLocaleDateString("zh-TW")}
-      </pre>
+      <pre>Last updated: {data[0].last_updated.toLocaleDateString("ja")}</pre>
       <Input
         min={10}
         max={rawData.length}
@@ -44,7 +44,7 @@ export const MedalsPerMillionPeopleBar = () => {
       />
       <NavBar view={view} setView={setView} />
       <BarChart view={view} data={data} rows={topTeams} />
-      {/* <Collapsible id="CFRByGroupsinTaiwan" /> */}
+      <Credit />
     </Card>
   );
 };

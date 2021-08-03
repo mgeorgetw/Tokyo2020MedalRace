@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "./css/BarChart.module.css";
+import { pointer } from "d3";
+import chartStyles from "./css/BarChart.module.css";
 export const Marks = ({
   view,
   data,
@@ -10,6 +11,7 @@ export const Marks = ({
   colorScale,
   tooltipFormat,
   onHover,
+  onMove,
   hoveredValue,
   fadeOpacity = 0.2,
   labelOffset = 10,
@@ -17,10 +19,14 @@ export const Marks = ({
 }) =>
   data.map((d, i) => (
     <g
-      className={styles.marks}
+      className={chartStyles.marks}
       key={yValue(d)}
       onMouseEnter={() => onHover(yValue(d))}
       onMouseLeave={() => onHover(null)}
+      onPointerMove={(event) => {
+        onHover(yValue(d));
+        onMove(pointer(event));
+      }}
       opacity={hoveredValue && hoveredValue !== yValue(d) ? fadeOpacity : 1}
     >
       <rect
@@ -35,46 +41,20 @@ export const Marks = ({
         }
       />
       <text
-        className={styles.tooltipStroke}
+        className={chartStyles.tooltipStroke}
         x={xScale(xValue(d)) + labelOffset}
         y={yScale(yValue(d)) + yScale.bandwidth() / 2}
-        dy=".42em"
-        alignmentBaseline="middle"
+        dominantBaseline="central"
       >
         {tooltipFormat(xValue(d))}
       </text>
       <text
-        className={styles.tooltip}
+        className={chartStyles.tooltip}
         x={xScale(xValue(d)) + labelOffset}
         y={yScale(yValue(d)) + yScale.bandwidth() / 2}
-        dy=".42em"
-        alignmentBaseline="middle"
+        dominantBaseline="central"
       >
         {tooltipFormat(xValue(d))}
       </text>
-      {hoveredValue && hoveredValue === yValue(d) ? (
-        <>
-          <text
-            className={styles.tooltipStroke}
-            x={xScale(xValue(d)) + labelOffset + 32}
-            y={yScale(yValue(d)) + yScale.bandwidth() / 2}
-            dy=".42em"
-          >
-            {`/ ${d.medals.toLocaleString()} ${
-              d.medals > 1 ? "medals" : "medal"
-            } won`}
-          </text>
-          <text
-            className={styles.tooltip}
-            x={xScale(xValue(d)) + labelOffset + 32}
-            y={yScale(yValue(d)) + yScale.bandwidth() / 2}
-            dy=".42em"
-          >
-            {`/ ${d.medals.toLocaleString()} ${
-              d.medals > 1 ? "medals" : "medal"
-            } won`}
-          </text>
-        </>
-      ) : null}
     </g>
   ));
