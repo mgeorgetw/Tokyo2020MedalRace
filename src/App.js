@@ -5,7 +5,7 @@ import "./App.css";
 
 const App = () => (
   <>
-    <GitHubStarBtn user="mgeorgetw" repo="COVID-19-Dashboard" />
+    <GitHubStarBtn user="mgeorgetw" repo="Tokyo2020MedalRace" />
     <MedalsPerMillionPeopleBar />
     <ScatterPlot />
   </>
