@@ -8,7 +8,7 @@ export const Input = ({ min, max, selected, handleChange }) => (
       min={min}
       max={max}
       value={selected}
-      onChange={(e) => e.target.value > 0 && handleChange(e.target.value)}
+      onChange={(e) => handleChange(e.target.value)}
     />
     <p> medals</p>
   </div>

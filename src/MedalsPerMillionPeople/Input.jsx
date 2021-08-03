@@ -9,7 +9,7 @@ export const Input = ({ min, max, selected, handleChange }) => (
       max={max}
       step="10"
       value={selected}
-      onChange={(e) => e.target.value > 0 && handleChange(e.target.value)}
+      onChange={(e) => handleChange(e.target.value)}
     />
     <p> entities</p>
   </div>

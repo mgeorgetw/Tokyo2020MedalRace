@@ -56,7 +56,7 @@ export const ScatterPlot = () => {
   const xScale = scaleLinear()
     // Domain is an array of actual data, starts from 0 to the max of all countries
     // d3.max(iterable[, accessor])
-    .domain([minMedals - 1, max(data, xValue)])
+    .domain([0, max(data, xValue)])
     // Range is where the data is shown in pixels, starts from 0 to chart's width
     .range([0, innerWidth])
     .nice();

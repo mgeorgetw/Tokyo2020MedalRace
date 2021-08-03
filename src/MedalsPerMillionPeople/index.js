@@ -25,7 +25,7 @@ export const MedalsPerMillionPeopleBar = () => {
   const rawData = useData();
 
   if (!rawData) return <pre>"Loading..."</pre>;
-  const data = rawData.slice(0, topTeams);
+  const data = rawData.slice(0, topTeams > 0 ? topTeams : 1);
   // if (data) console.log(data[0]);
 
   return (
