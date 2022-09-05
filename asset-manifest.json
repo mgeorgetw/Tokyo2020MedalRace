@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Tokyo2020MedalRace/static/css/main.b30bdf49.chunk.css",
-    "main.js": "/Tokyo2020MedalRace/static/js/main.23e33819.chunk.js",
-    "main.js.map": "/Tokyo2020MedalRace/static/js/main.23e33819.chunk.js.map",
+    "main.css": "/Tokyo2020MedalRace/static/css/main.1d7906c6.chunk.css",
+    "main.js": "/Tokyo2020MedalRace/static/js/main.890ce509.chunk.js",
+    "main.js.map": "/Tokyo2020MedalRace/static/js/main.890ce509.chunk.js.map",
     "runtime-main.js": "/Tokyo2020MedalRace/static/js/runtime-main.0ec9d354.js",
     "runtime-main.js.map": "/Tokyo2020MedalRace/static/js/runtime-main.0ec9d354.js.map",
     "static/js/2.7be9f1f5.chunk.js": "/Tokyo2020MedalRace/static/js/2.7be9f1f5.chunk.js",
     "static/js/2.7be9f1f5.chunk.js.map": "/Tokyo2020MedalRace/static/js/2.7be9f1f5.chunk.js.map",
     "index.html": "/Tokyo2020MedalRace/index.html",
-    "static/css/main.b30bdf49.chunk.css.map": "/Tokyo2020MedalRace/static/css/main.b30bdf49.chunk.css.map",
+    "static/css/main.1d7906c6.chunk.css.map": "/Tokyo2020MedalRace/static/css/main.1d7906c6.chunk.css.map",
     "static/js/2.7be9f1f5.chunk.js.LICENSE.txt": "/Tokyo2020MedalRace/static/js/2.7be9f1f5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0ec9d354.js",
     "static/js/2.7be9f1f5.chunk.js",
-    "static/css/main.b30bdf49.chunk.css",
-    "static/js/main.23e33819.chunk.js"
+    "static/css/main.1d7906c6.chunk.css",
+    "static/js/main.890ce509.chunk.js"
   ]
 }
