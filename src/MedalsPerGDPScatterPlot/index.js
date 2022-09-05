@@ -29,14 +29,14 @@ const xAxisLabel = "Total Medals";
 const xAxisLabelOffset = 50;
 const xAxisTickFormat = (tickValue) => format("~")(tickValue);
 
-const yValue = (d) => d.medals_per_million;
-const yAxisLabel = "Medals Per Million People";
+const yValue = (d) => d.medals_per_gdp;
+const yAxisLabel = "Medals Per GDP";
 const yAxisLabelOffset = 20;
 
 const tickOffset = 7;
 const markCircleRadius = 6;
 
-export const ScatterPlot = () => {
+export const MedalsPerGDPScatterPlot = () => {
   const [minMedals, setMinMedals] = useState(initialMinMedals);
   const [hoveredValue, setHoveredValue] = useState(null);
   const handleHover = useCallback(setHoveredValue, [setHoveredValue]);
@@ -60,7 +60,7 @@ export const ScatterPlot = () => {
 
   return (
     <Card>
-      <ChartTitle title="2020 Summer Olympics: medals per capita vs. plain medal count" />
+      <ChartTitle title="2020 Summer Olympics: medals per GDP vs. plain medal count" />
       <pre>Last updated: {data[0].last_updated.toLocaleDateString("ja")}</pre>
       <Input
         min={1}
@@ -76,17 +76,13 @@ export const ScatterPlot = () => {
             tickFormat={xAxisTickFormat}
             tickOffset={tickOffset}
           />
-
           <XAxisLabel />
-
           <AxisLeft
             innerWidth={innerWidth}
             yScale={yScale}
             tickOffset={tickOffset}
           />
-
           <YAxisLabel />
-
           <Marks
             xScale={xScale}
             xValue={xValue}

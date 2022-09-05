@@ -1,0 +1,9 @@
+.inputContainer > * {
+  display: inline;
+  vertical-align: middle;
+  width: 3rem;
+}
+
+.inputContainer > input {
+  margin: 0 0.5em;
+}

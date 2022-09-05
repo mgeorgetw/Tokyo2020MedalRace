@@ -6,3 +6,14 @@
 .nav > * {
   margin-right: 1em;
 }
+
+button.viewButton {
+  border-style: outset;
+  border-radius: 5px;
+}
+
+button.active {
+  border-style: inset;
+  border-radius: 5px;
+  color: gray;
+}

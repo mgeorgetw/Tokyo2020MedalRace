@@ -14,8 +14,7 @@ export const Marks = ({
   onMove,
   hoveredValue,
   fadeOpacity = 0.2,
-  labelOffset = 10,
-  tooltipOffset = 22,
+  tooltipOffset = 10,
 }) =>
   data.map((d, i) => (
     <g
@@ -34,15 +33,11 @@ export const Marks = ({
         y={yScale(yValue(d))}
         width={xScale(xValue(d))}
         height={yScale.bandwidth()}
-        fill={
-          view === "mpm"
-            ? colorScale((data.length - i) / data.length)
-            : "orange"
-        }
+        fill={colorScale((data.length - i) / data.length)}
       />
       <text
         className={chartStyles.tooltipStroke}
-        x={xScale(xValue(d)) + labelOffset}
+        x={xScale(xValue(d)) + tooltipOffset}
         y={yScale(yValue(d)) + yScale.bandwidth() / 2}
         dominantBaseline="central"
       >
@@ -50,7 +45,7 @@ export const Marks = ({
       </text>
       <text
         className={chartStyles.tooltip}
-        x={xScale(xValue(d)) + labelOffset}
+        x={xScale(xValue(d)) + tooltipOffset}
         y={yScale(yValue(d)) + yScale.bandwidth() / 2}
         dominantBaseline="central"
       >
