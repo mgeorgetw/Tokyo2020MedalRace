@@ -12,7 +12,7 @@ export const NavBar = ({ view, setView }) => {
           : styles.viewButton,
     },
     {
-      name: "Plain Medals Count",
+      name: "Plain Medal Count",
       view_name: "medals",
       className:
         view === "medals"
