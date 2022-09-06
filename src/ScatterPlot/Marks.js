@@ -21,13 +21,13 @@ export const Marks = ({
       onPointerMove={() => {
         onHover(yValue(d));
       }}
-      opacity={hoveredValue && hoveredValue !== yValue(d) ? fadeOpacity : 1}
     >
       <circle
         fill={colorScale((data.length - index) / data.length)}
         cx={xScale(xValue(d))}
         cy={yScale(yValue(d))}
         r={circleRadius}
+        opacity={hoveredValue && hoveredValue !== yValue(d) ? fadeOpacity : 0.6}
       >
         <title>{`${d.entity} has earned ${tooltipFormat(
           xValue(d)
@@ -45,6 +45,7 @@ export const Marks = ({
         textAnchor={
           xScale(xValue(d)) > xScale(max(data, xValue)) * 0.9 ? "end" : "start"
         }
+        opacity={hoveredValue && hoveredValue !== yValue(d) ? fadeOpacity : 1}
       >
         {d.entity}
       </text>
